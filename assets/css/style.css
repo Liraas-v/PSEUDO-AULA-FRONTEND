@@ -1,92 +1,236 @@
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
+/* ── SECTION LIVRO ── */
 .livro {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* ── COLUNA PEDIDO (esquerda) ── */
 .pedido {
     background-color: #e6d6c1;
     padding: 30px 60px;
-    width: 30%;
-
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+    width: 38%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.pedido h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.pedido form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ── INPUTS ── */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    background-color: #f8eee2;
+    padding: 10px 14px;
+    border: 1.5px solid #793f1d;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #793f1d;
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    outline: none;
+    transition: all 0.4s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: #793f1d;
+    opacity: 0.8;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+select {
+    color: #793f1d;
+    cursor: pointer;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #5a2e12;
+    background-color: #fff8f2;
+}
+
+/* ── PRESENTE ── */
 .presente {
     border-top: 1px dotted #793f1d;
     border-bottom: 1px dotted #793f1d;
-    padding-bottom: 20px;
-
-    h4 {
-        margin-bottom: 10px;
-    }
+    padding: 14px 0 18px;
 }
 
-input, select, textarea {
-    background-color: #f8eee2;
-    padding: 10px;
-    border: 1px solid;
-    border-radius: 5px;
+.presente h4 {
+    margin: 0 0 10px 0;
     font-size: 16px;
-    transition: all .5s ease-in-out;
-    color: #793f1d;
-    font-family: Roboto, Calibri, cursive;
-    resize: none;
 }
 
+.presente label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 16px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color: #793f1d;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ── TERMOS ── */
+.termos {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+input[type="checkbox"] {
+    accent-color: #793f1d;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+/* ── BOTÃO ENVIAR ── */
 input[type="submit"] {
     background-color: #793f1d;
     color: white;
-    font-size: 18px;
+    font-size: 17px;
     cursor: pointer;
     width: fit-content;
     padding: 10px 30px;
-    margin: 0 0 0 auto;
-    transition: background-color 0.5s ease-in-out;
+    margin-left: auto;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+    transition: background-color 0.4s ease;
 }
 
+input[type="submit"]:hover {
+    background-color: #5a2e12;
+}
+
+/* ── COLUNA MODELO (direita) ── */
 .modelo {
-    width: 50%;
+    width: 62%;
     padding: 30px 60px;
-    font-family: 'Playfair Display', serif;
     display: flex;
     align-items: center;
     gap: 40px;
     text-align: justify;
-    font-size: 24px;
-    text-indent: 40px;
-
-    img {
-        border-radius: 35px;
-        height: 450px;
-    }
+    font-size: 22px;
+    font-family: 'Playfair Display', serif;
 }
 
+.modelo img {
+    border-radius: 35px;
+    height: 450px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.modelo p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.modelo p::first-letter {
+    font-family: 'Lavishly Yours', cursive;
+    font-size: 3em;
+    color: #793f1d;
+    float: left;
+    line-height: 0.8;
+    margin-right: 4px;
+}
+
+.modelo p .highlight {
+    color: #793f1d;
+    font-style: italic;
+}
+
+/* ── SECTION RANKING ── */
 .ranking {
     background-color: #fadab1;
-    padding: 30px 60px;
+    padding: 40px 60px;
     text-align: center;
-    
-    ol {
-        width: fit-content;
-        margin: 0 auto;
-        font-size: 18px;
-        text-align: left;
+}
 
-        li {
-            margin-bottom: 10px;
-        }
-    }
+.ranking h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 24px;
+}
+
+.ranking ol {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    list-style: none;
+    counter-reset: rank;
+    padding: 0;
+}
+
+.ranking ol li {
+    counter-increment: rank;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    color: #3a2a1a;
+}
+
+.ranking ol li::before {
+    content: counter(rank) ".";
+    font-weight: 700;
+    color: #793f1d;
+    min-width: 24px;
+}
+
+.ranking ol li.top3 {
+    color: #2d5a27;
+    font-weight: 600;
+}
+
+.ranking ol li:not(.top3) {
+    color: #8b3a1a;
 }

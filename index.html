@@ -4,25 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pseudo Aula</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     
+    <!-- SEÇÃO 1: Formulário + Imagem -->
     <section class="livro">
+ 
         <div class="pedido">
             <h2>Faça seu pedido:</h2>
+ 
+            <form>
+                <input required type="text" placeholder="Digite seu nome">
+                <input required type="email" placeholder="Digite seu email">
+                <textarea placeholder="Observações"></textarea>
+ 
+                <select>
+                    <option value="" disabled selected>Selecione um livro</option>
+                    <option value="bela">A Bela e a Fera</option>
+                    <option value="branca">Branca de Neve</option>
+                    <option value="sereia">A Pequena Sereia</option>
+                    <option value="cinderela">Cinderela</option>
+                    <option value="mulan">Mulan</option>
+                    <option value="oz">O Mágico de OZ</option>
+                </select>
+ 
+                <div class="presente">
+                    <h4>Embrulhar para presente?</h4>
+                    <label><input type="radio" name="presente" value="sim"> Sim</label>
+                    <label><input type="radio" name="presente" value="nao"> Não</label>
+                </div>
+ 
+                <label class="termos">
+                    <input type="checkbox"> Li e aceito os termos
+                </label>
+ 
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
 
-            
-        </div>
-        
         <div class="modelo">
+            <!-- Substitua pelo caminho real da imagem: ./assets/images/carta-bela.jpg -->
             <img src="./assets/images/carta-bela.jpg" alt="Carta da Bela e a Fera">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores suscipit maxime in eos deserunt cumque velit vel neque nisi. Hic ipsa velit a explicabo omnis recusandae expedita ex rerum consequuntur?</p>
+ 
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolores suscipit maxime in eos deserunt cumque velit vel neque nisi.
+                Hic ipsa velit a explicabo
+                <span class="highlight">omnis recusandae</span>
+                expedita ex rerum consequuntur?
+            </p>
         </div>
+ 
     </section>
-    
+ 
+    <!-- SEÇÃO 2: Ranking -->
     <section class="ranking">
         <h2>Livros Mais Vendidos</h2>
-
+ 
         <ol>
             <li class="top3">A Bela e a Fera</li>
             <li class="top3">Branca de Neve</li>
@@ -32,6 +71,7 @@
             <li>O mágico de OZ</li>
         </ol>
     </section>
-
+ 
 </body>
 </html>
+ 
